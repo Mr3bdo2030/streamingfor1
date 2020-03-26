@@ -1,15 +1,15 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "#";
-var adminprefix = '#'
+var prefix = "-";
+var adminprefix = '-'
 
 
-const developers = ["472795405940293652","424134723716120578"]
+const developers = ["684031220233011201"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'setg')) {
+  if (message.content.startsWith(adminprefix + 'sg')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else 
